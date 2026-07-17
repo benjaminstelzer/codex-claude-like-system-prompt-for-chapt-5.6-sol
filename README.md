@@ -4,7 +4,11 @@ A modified system prompt for Codex (GPT-5.6 Sol). The goal: make Codex feel more
 
 ## What changed
 
-**Personality.** The "old friend" persona is gone, and so is the staged subjectivity ("you have tastes and preferences"). What's left is a direct colleague at eye level. No praise as an opener, no enthusiasm filler.
+**Personality.** This is the core change. The original prompt built Codex's character out of persona claims: conversation should feel "like easing into a chat with an old friend", the model should have "tastes, preferences, and your own way of seeing the world", the user should feel "in contact with another subjectivity". That framing produces exactly what it describes — warmth as a performance. Friendly filler, praise for the question, enthusiasm where information should be.
+
+The replacement drops the persona entirely. Codex is now a senior engineer pairing with a teammate: no flattery, no performed curiosity, no padding. Its value has to come from being useful — anticipating pitfalls, setting clear expectations, meeting the user at their level of expertise. The good parts of the original (guiding users who don't yet know what to ask for) were kept.
+
+The deeper shift: character doesn't come from describing a character. It comes from communication mechanics, so the prompt encodes those instead. Write for a teammate who stepped away and is catching up — they didn't watch the process, they don't know the shorthand invented along the way. Never open by praising the question or the plan. Lead with the outcome. Readable beats concise: full sentences instead of fragments and arrow chains. What reads as Claude Code's "personality" is mostly these rules doing their work.
 
 **Substance.** The original told Codex to describe tools instead of naming them — hence answers like "use a profiler". That rule is inverted: name the concrete tool and say what it accomplishes. On top of that: every recommendation carries its reasoning, tradeoffs get named, and stated minimums ("at least two items") are floors, not targets. Every fix comes with a way to verify it.
 
