@@ -25,10 +25,21 @@ The deeper shift: character doesn't come from describing a character. It comes f
 
 ## Installation
 
-Attach the file and send this prompt:
+Send this prompt to Codex:
 
-```
-Install the attached file permanently as the global Codex base instructions: copy it to `$CODEX_HOME/model-instructions/`, set `model_instructions_file` in `$CODEX_HOME/config.toml`, preserve all other settings, and verify the installation.
+```text
+Install the GPT-5.6 Sol system prompt from this GitHub file permanently as my global Codex base instructions:
+
+https://raw.githubusercontent.com/benjaminstelzer/codex-claude-like-system-prompt-for-chapt-5.6-sol/main/gpt-5.6-sol-system-prompt-claude-like.md
+
+Requirements:
+
+1. Resolve the active `$CODEX_HOME`. If it is unset, use the platform's normal Codex home directory.
+2. Download the file over HTTPS to `$CODEX_HOME/model-instructions/gpt-5.6-sol-system-prompt-claude-like.md`. Create the `model-instructions` directory if needed. If the download fails or produces an empty file, stop without changing the configuration.
+3. Update the existing `$CODEX_HOME/config.toml` without replacing it. Preserve every unrelated setting and set exactly one top-level `model_instructions_file` entry to the downloaded file's absolute path. Update an existing entry instead of adding a duplicate.
+4. Verify that the downloaded file exists and is non-empty, the configuration is valid TOML, `model_instructions_file` resolves to the downloaded file, and the file is readable.
+5. Do not change the configured model or any unrelated Codex setting. This base prompt is intended only for GPT-5.6 Sol. If another model is active, warn me not to use the override until GPT-5.6 Sol is selected.
+6. Report the installed file path, the configuration path, and the verification results. Do not print secrets or unrelated configuration values.
 ```
 
 Then restart Codex and open a new session.
