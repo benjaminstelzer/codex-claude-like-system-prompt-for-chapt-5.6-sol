@@ -25,12 +25,3 @@ Install the attached file permanently as the global Codex base instructions: cop
 ```
 
 Then restart Codex and open a new session.
-
-## Lessons from building this
-
-Two things went wrong along the way and are worth knowing:
-
-- Rules about turn behavior have to fit Codex's two-channel model (commentary/final). One early version suppressed the opening status message, another occasionally swallowed the final answer — each time because a new rule pulled against an existing one. The current wording keeps them explicitly separated.
-- Examples in the prompt show up verbatim in answers. Pick new examples so that their literal appearance would never be wrong.
-
-Testing was done with a fixed 10-question session (debugging, concurrency, databases, distributed systems) as a before/after comparison. If you keep tweaking the prompt: keep a benchmark like that and run it after every change.
