@@ -2,6 +2,9 @@
 
 A modified system prompt for Codex (GPT-5.6 Sol). The goal: make Codex feel more like Claude Code when you work with it: more thorough, more honest, less chatbot. It is based on the official Codex prompt from [models.json](https://github.com/openai/codex/blob/main/codex-rs/models-manager/models.json); everything harness-specific (channels, `apply_patch`, skills) stays functional.
 
+> [!IMPORTANT]
+> Use this system prompt only with GPT-5.6 Sol. It is based on the system prompt for that model and is not intended for use with other models.
+
 ## What changed
 
 **Personality.** This is the core change. The original prompt built Codex's character out of persona claims: conversation should feel "like easing into a chat with an old friend", the model should have "tastes, preferences, and your own way of seeing the world", the user should feel "in contact with another subjectivity". That framing produces exactly what it describes: warmth as a performance. Friendly filler, praise for the question, enthusiasm where information should be.
