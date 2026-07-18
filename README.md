@@ -74,3 +74,9 @@ and changes with Codex releases. After a Codex update:
    adopting the update.
 
 Last verified against upstream: 2026-07-18.
+
+## License
+
+Licensed under the Apache License, Version 2.0. This repository contains
+modified material from OpenAI Codex. See [LICENSE](LICENSE) and
+[NOTICE](NOTICE).
