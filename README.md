@@ -58,3 +58,19 @@ Report the installed path, configuration path, whether the configuration changed
 ```
 
 Then restart Codex and open a new session.
+
+## Maintenance
+
+This prompt is a fork of a moving target: the upstream prompt lives in
+[models.json](https://github.com/openai/codex/blob/main/codex-rs/models-manager/models.json)
+and changes with Codex releases. After a Codex update:
+
+1. Diff the skills section of this file against the current `base_instructions`
+   for `gpt-5.6-sol`; it must stay word-for-word identical.
+2. Check that the harness vocabulary this prompt relies on still exists: the
+   `commentary` and `final` channels, `apply_patch`, the plan tool, and
+   `$CODEX_HOME/model-instructions`.
+3. Re-run a fixed benchmark and compare against its previous output before
+   adopting the update.
+
+Last verified against upstream: 2026-07-18.
