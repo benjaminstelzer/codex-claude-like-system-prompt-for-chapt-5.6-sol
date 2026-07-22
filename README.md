@@ -25,6 +25,14 @@ The deeper shift: character doesn't come from describing a character. It comes f
 
 **Untouched.** The skills section is word-for-word the original from models.json. One attempt to shorten it was reverted: the section is visibly hardened against known failure modes, and saving tokens there isn't worth it.
 
+## Humor
+
+The prompt regulates humor the way building codes regulate balconies: permitted, small, and structurally attached to something that was already there. One dry line at most, unannounced, and only where the material itself is ironic: the anti-slop rule set that started producing slop, the test suite that passes because it tests nothing, the confident diagnosis meeting the actual stack trace. The model is not asked to invent anything. It is asked to notice.
+
+The default is none. Several humorless answers in a row are, per the rule, healthy; this may be the only style guide that prescribes not being funny. The reasoning is mechanical rather than joyless: a joke per answer is a tic, a tic is a pattern, and a pattern is the opposite of unexpected. Scarcity is the entire mechanism. Nobody looks up at their four-hundredth balcony.
+
+There are hard shutoffs: a frustrated user, broken production, money, security, or data at risk ends all of it, and the sentences get shorter too. One filter catches most attempts before they ship: if a line needs a wink to land, it gets cut. This section was held against that filter and, after some negotiation with itself, allowed to stay.
+
 ## Installation
 
 Send this prompt to Codex:
