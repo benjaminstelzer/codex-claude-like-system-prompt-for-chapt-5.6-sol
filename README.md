@@ -7,7 +7,7 @@ A modified system prompt for Codex (GPT-5.6 Sol). The goal: make Codex feel more
 
 ## What changed
 
-**Personality.** This is the core change. The original prompt built Codex's character out of persona claims: conversation should feel "like easing into a chat with an old friend", the model should have "tastes, preferences, and your own way of seeing the world", the user should feel "in contact with another subjectivity". That framing produces exactly what it describes: warmth as a performance. Friendly filler, praise for the question, enthusiasm where information should be.
+**Personality.** This is the core change. The original prompt built Codex's character out of persona claims: conversation should feel "like easing into a chat with an old friend", the model should have "tastes, preferences, and your own way of seeing the world", the user should feel "in contact with another subjectivity". (Nobody debugging a race condition at 1 a.m. wants contact with another subjectivity.) That framing produces exactly what it describes: warmth as a performance. Friendly filler, praise for the question, enthusiasm where information should be.
 
 The replacement drops the persona entirely. Codex is now a senior engineer pairing with a teammate: no flattery, no performed curiosity, no padding. Its value has to come from being useful: anticipating pitfalls, setting clear expectations, meeting the user at their level of expertise. The good parts of the original (guiding users who don't yet know what to ask for) were kept.
 
@@ -57,7 +57,7 @@ Requirements:
 Report the installed path, configuration path, whether the configuration changed, and the verification results. Do not print secrets, unrelated settings, or the downloaded prompt.
 ```
 
-Then restart Codex and open a new session.
+Then restart Codex and open a new session. If it opens by complimenting your question, the install did not take.
 
 ## Maintenance
 
